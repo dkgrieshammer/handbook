@@ -511,7 +511,8 @@ Throws NetworkError, InvalidStateError or Error if the operation fails.
 
 Throws NetworkError or InvalidStateError or Error if the operation fails.
 
-34. `replaceTrack` - replaces the track currently being used as the sender's source with a new MediaStreamTrack. The new track must be of the same media kind (audio, video, etc) and switching the track should not require negotiation. `replaceTrack(oldTrack, newTrack)`
+34. `replaceTrack` - replaces the track currently being used as the sender's source with a new MediaStreamTrack. The new track must be of the same media kind (audio, video, etc) and switching the track should not require negotiation. `replaceTrack(oldTrack, newTrack)`.
+Please note, `dispose()` still needs to be called on the old track to trigger immediate switching of the media stream.
 
 Throws NetworkError or InvalidStateError or Error if the operation fails.
 
